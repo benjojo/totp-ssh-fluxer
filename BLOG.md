@@ -3,7 +3,7 @@ TOTP SSH port fluxing
 
 Some people change their SSH port on their servers so that it is slightly harder to find for bots or other nasties and while that is generally viewed as an action of [security through obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity) it does work very well at killing a lot of the automated logins you always see in `/var/log/auth.log`.
 
-However what if we could go take this to a ridiculous level? What if we could use <abbr style="border-bottom: 1px dashed green;" title="Time-based One-time Password Algorithm
+However what if we could go take this to a ridiculous level? What if we could use <abbr style="border-bottom: 1px dotted green;" title="Time-based One-time Password Algorithm
 ">TOTP</abbr> codes that are normally used as 2nd factor codes to login to websites to actually know what port the sshd server is listening on?
 
 For this I present [totp-ssh-flux](https://github.com/benjojo/totp-ssh-fluxer): a way to make sure your sshd port changes every 30 seconds, possibly causing your adversaries a small period of frustration.
